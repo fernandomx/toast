@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,11 +22,20 @@ public class MainActivity extends AppCompatActivity {
         ImageView imagem = new ImageView(getApplicationContext());
         imagem.setImageResource(android.R.drawable.star_big_off);
 
+        TextView textview = new TextView(getApplicationContext());
+        textview.setBackgroundResource(R.color.colorAccent);
+        textview.setText("OLá toast");
+
+
         Toast toast = new Toast( getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
 
-        toast.setView(imagem);
+        //toast.setView(imagem);
+        toast.setView(textview);
         toast.show();
+
+
+
 
 
         /*
